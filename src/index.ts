@@ -8,6 +8,7 @@ const port = process.env.PORT;
 
 app.get("/", (req: Request, res: Response) => {
 	console.log(req.query);
+	console.log(req.cookies);
   res.send("Express + TypeScript Server");
 });
 
