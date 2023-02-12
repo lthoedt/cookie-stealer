@@ -10,10 +10,11 @@ const port = process.env.PORT;
 app.use(cookies());
 
 app.get("/", (req: Request, res: Response) => {
-	console.log(req.query);
 	console.log(JSON.stringify(req.cookies));
 	console.log(JSON.stringify(req.signedCookies));
-  res.send("Express + TypeScript Server");
+	console.log(req.hostname)
+	console.log(req.ip)
+	res.send("Express + TypeScript Server");
 });
 
 app.listen(port, () => {
